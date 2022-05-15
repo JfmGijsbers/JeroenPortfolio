@@ -1,0 +1,41 @@
+{
+  "recipes": [
+    {
+      "title": "Boeuf Bourguignon",
+      "intro": "Ingredienten zijn per 4 personen. Stappen over het snijden zijn gedefinieerd in wat bij elkaar in een bakje kan",
+      "prep": "4 uur - uur snijden, 3 uur stoven",
+      "ingredients": [
+        "1kg runderriblappen",
+        "250ml rode wijn",
+        "250ml runderbouillon (liefst kip)",
+        "150gram spekreepjes (of lappen gerookte ontbijtspek)",
+        "3 uien",
+        "3 teentjes knoflook",
+        "2 takjes tijn",
+        "2 laurierblaadjes",
+        "2 takjes peterselie",
+        "6 winterpenen",
+        "1 blikje tomatenpuree (70g)",
+        "Een halve peperkoek",
+        "Roomboter",
+        "Peper, zout, olie",
+        "Kastanjechampignons"
+      ],
+      "steps": [
+        "Snijd het rundvlees in stukjes",
+        "Snijd de winterpeen in stukjes, de knoflook in plakjes, en de kastanjechampignons in kwarten (met of zonder stam)",
+        "Maak een builtje van de kruiden (met de elastiek die erbij zit",
+        "Snijd de uien in halve manen",
+        "Bak de spekreepjes in de pan met een klein beetje olie even kort uit (en houd de olie in de pan!)",
+        "Schep de spekjes uit de pan en houd ze even apart in een schaaltje",
+        "Bak de blokjes rundvlees rondom bruin in een pan met het vet van de spek en 50g roomboter",
+        "Voeg het blikje tomatenpuree toe en bak dit even mee",
+        "Zet het vuur laag, en voeg het schaaltje met winterpeen, knoflook en kastanjechampignons toe",
+        "Voeg ook de runderbouillon, de rode wijn en het kruidenbuiltje nu toe",
+        "Doe de deksel op de pan en laat 2.5 uur stoven",
+        "Bak de uien tot ze glazig zijn, en voeg ze toe aan het stoofvlees. Laat vervolgens nog halfuur stoven",
+        "Breng op smaak met zout en peper, en eventueel fijngesneden peterselie"
+      ]
+    }
+    ]
+}
