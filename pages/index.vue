@@ -1,7 +1,7 @@
 <template>
 <div>
-    <NavBar/>
     <AboutMe/>
+    <Projects/>
     <Skills/>
     <Education/>
 </div>
@@ -11,6 +11,6 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'IndexPage'
+    name: "IndexPage",
 })
 </script>

@@ -52,7 +52,7 @@ export default {
                 content: 'Born',
                 target: 'Heeze, Noord Brabant',
                 href: '#',
-                date: 'Mar 04 \'00',
+                date: 'Mar 04 2000',
                 datetime: '2000-03-04',
                 iconBackground: 'bg-purple-400',
                 icon: EmojiHappy
@@ -62,7 +62,7 @@ export default {
                 content: 'Bartender at',
                 target: 'Tapperij de Zwaan',
                 href: '#',
-                date: 'Jun \'15',
+                date: 'Jun 2015',
                 datetime: '2015-06-01',
                 iconBackground: 'bg-blue-500',
                 icon: Users
@@ -72,7 +72,7 @@ export default {
                 content: 'Started Bachelor',
                 target: 'Computer Science and Engineering',
                 href: '#',
-                date: 'Sep \'18',
+                date: 'Sep 2018',
                 datetime: '2018-09-01',
                 iconBackground: 'bg-purple-400',
                 icon: Library
@@ -82,7 +82,7 @@ export default {
                 content: 'Script Developer at ',
                 target: 'Coosto',
                 href: '#',
-                date: 'Oct \'19',
+                date: 'Oct 2019',
                 datetime: '2019-08-01',
                 iconBackground: 'bg-blue-500',
                 icon: Office
@@ -92,7 +92,7 @@ export default {
                 content: 'Fullstack Developer at ',
                 target: 'Coosto',
                 href: '#',
-                date: 'Oct \'20',
+                date: 'Oct 2020',
                 datetime: '2020-08-01',
                 iconBackground: 'bg-blue-500',
                 icon: Office
@@ -102,7 +102,7 @@ export default {
                 content: 'Graduated',
                 target: 'Computer Science & Engineering',
                 href: '#',
-                date: 'Jun \'21',
+                date: 'Jun 2021',
                 datetime: '2021-06-01',
                 iconBackground: 'bg-green-500',
                 icon: Library
@@ -112,7 +112,7 @@ export default {
                 content: 'Started Master',
                 target: 'Data Science and Artificial Intelligence',
                 href: '#',
-                date: 'Sep \'21',
+                date: 'Sep 2021',
                 datetime: '2021-09-01',
                 iconBackground: 'bg-purple-400',
                 icon: Library
