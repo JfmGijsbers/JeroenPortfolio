@@ -138,7 +138,7 @@ export default {
                     intro: 'Tinder-like clothing inspiration platform built with Nuxt.js and Node.js.',
                     description: 'Tinder-like clothing inspiration platform.',
                     link: 'https://github.com/JfmGijsbers/',
-                    images: [require('@/static/carousel_imgs/img1.jpg'), require('@/static/carousel_imgs/img2.jpg'), require('@/static/carousel_imgs/img3.jpg')],
+                    images: [require('@/static/project_imgs/thisone/thisone_1.png'), require('@/static/project_imgs/thisone/thisone_2.png'), require('@/static/project_imgs/thisone/thisone_3.png'), require('@/static/project_imgs/thisone/thisone_4.png')],
                     achievements: [
                         'Secure authentication',
                         'Working with SEO',
@@ -165,7 +165,7 @@ export default {
                     intro: 'The website you are currently on :)',
                     description: 'My portfolio / resume website, which you are currently visiting! I display some of my projects, my skills and my education/career here. Furthermore, don\'t forget to visit the cooking sub-page! ',
                     link: 'https://github.com/JfmGijsbers/',
-                    images: [require('@/static/carousel_imgs/img1.jpg'), require('@/static/carousel_imgs/img2.jpg'), require('@/static/carousel_imgs/img3.jpg')],
+                    images: [require('@/static/project_imgs/personal/personal_1.png'), require('@/static/project_imgs/personal/personal_2.png'), require('@/static/project_imgs/personal/personal_3.png')],
                     achievements: [
                         'Designing a website',
                     ]
