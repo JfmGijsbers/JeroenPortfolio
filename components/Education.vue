@@ -2,24 +2,24 @@
   <div class="flow-root">
     <a href="" id="education"></a>
     <p class="text-center text-base font-semibold uppercase text-gray-600 tracking-wider">Education & Career</p>
-    <ul role="list" class="-mb-8 mt-8 px-8 lg:px-28">
+    <ul role="list" class="-mb-8 mt-8 px-8 lg:px-28 dark:bg-gray-600">
       <li v-for="(event, eventIdx) in timeline" :key="event.id">
         <div class="relative pb-8">
-          <span v-if="eventIdx !== timeline.length - 1" class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true" />
+          <span v-if="eventIdx !== timeline.length - 1" class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200 dark:bg-gray-500" aria-hidden="true" />
           <div class="relative flex space-x-3">
             <div>
-              <span :class="[event.iconBackground, 'h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white']">
+              <span :class="[event.iconBackground, 'h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white dark:ring-gray-500']">
                   <!-- <Calculator/> -->
                 <component :is="event.icon" class="h-5 w-5 text-white" aria-hidden="true" />
               </span>
             </div>
             <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
               <div>
-                <p class="text-sm text-gray-500">
-                  {{ event.content }} <a :href="event.href" class="font-medium text-gray-900">{{ event.target }}</a>
+                <p class="text-sm text-gray-500 dark:text-gray-300">
+                  {{ event.content }} <a :href="event.href" class="font-medium text-gray-900 dark:text-gray-400">{{ event.target }}</a>
                 </p>
               </div>
-              <div class="text-right text-sm whitespace-nowrap text-gray-500">
+              <div class="text-right text-sm whitespace-nowrap text-gray-500 dark:text-gray-400">
                 <time :datetime="event.datetime">{{ event.date }}</time>
               </div>
             </div>

@@ -2,11 +2,11 @@
   <div class="px-8 lg:px-28 mb-8 mt-8">
       
     <a href="" id="skills"></a>
-    <p class="text-center text-base font-semibold uppercase text-gray-600 tracking-wider">Skills & technologies</p>
-    <div class="text-xs font-medium text-gray-500 text-right">**scale where 0 is fundamental awareness and 100 is expert knowledge </div>
+    <p class="text-center text-base font-semibold uppercase text-gray-600 dark:text-gray-400 tracking-wider">Skills & technologies</p>
+    <div class="text-xs font-medium text-gray-500 dark:text-gray-400 text-right">**scale where 0 is fundamental awareness and 100 is expert knowledge </div>
 
     <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-      <div v-for="item in stats" :key="item.id" class="relative shadow-lg bg-white pt-5 px-4 pb-12 sm:pt-6 sm:px-6 rounded-lg overflow-hidden">
+      <div v-for="item in stats" :key="item.id" class="relative shadow-lg dark:bg-gray-400 pt-5 px-4 pb-12 sm:pt-6 sm:px-6 rounded-lg overflow-hidden">
         <dt>
           <div class="absolute border border-gray-600 rounded-md p-1">
             <!-- <component :is="item.icon" class="h-6 w-6 text-white" aria-hidden="true" /> -->
@@ -15,14 +15,15 @@
           <p class="ml-16 text-md font-large truncate">{{ item.name }}</p>
         </dt>
         <dd class="ml-16 pb-6 flex items-baseline sm:pb-7">
-          <p class="text-sm text-gray-500">
+          <p class="text-sm text-gray-500 dark:text-gray-600">
             {{ item.desc }}
           </p>
-          <div class="absolute bottom-0 inset-x-0 bg-gray-50 px-4 py-4 sm:px-6">
-            <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                <div :class="['bg-'+item.bg+'-600', 'text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full']" :style="{width: item.progress + '%'}">{{ item.progress }}%</div>
+          <div class="absolute bottom-0 inset-x-0 bg-gray-50 px-4 py-4 sm:px-6 dark:bg-gray-700">
+            <div class="w-full bg-gray-200 dark:bg-gray-400 rounded-full h-4">
+                <div :class="['bg-'+item.bg+'-600', 'dark:bg-'+item.bg+'-700', 'text-xs h-4 font-medium text-blue-100 text-center p-0.5 leading-none rounded-full']" :style="{width: item.progress + '%'}">{{ item.progress }}%</div>
             </div>
           </div>
+          <div class="invisible bg-green-600 bg-purple-600 bg-yellow-600"></div>
         </dd>
       </div>
     </dl>

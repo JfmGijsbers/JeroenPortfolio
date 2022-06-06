@@ -2,43 +2,43 @@
   <div class="px-8 lg:px-28 mb-8 mt-12">
       
     <a href="" id="projects"></a>
-    <p class="text-center text-base font-semibold uppercase text-gray-600 tracking-wider">Projects</p>
+    <p class="text-center text-base font-semibold uppercase text-gray-500 dark:text-gray-400 tracking-wider">Projects</p>
 
     <dl class="mt-5 mx-4">
-        <VueSlickCarousel v-bind="settings" class="mx-4"> 
+        <VueSlickCarousel v-bind="settings" :style="color"> 
 
-        <div class="shadow overflow-hidden sm:rounded-lg border-t border-gray-200 project-card" v-for="project in projects" :key="project.name">
+        <div class="px-4 shadow overflow-hidden sm:rounded-lg border border-gray-200 dark:bg-gray-700 project-card" v-for="project in projects" :key="project.name">
             <div class="px-4 py-5 sm:px-6">
                 <div class="flex items-center">
-                    <h3 class="text-lg leading-6 font-medium text-gray-900 w-full md:w-4/5">{{ project.name }}</h3>
-                    <a href="https://github.com/JfmGijsbers" target="_blank" class="md:w-10 w-full h-10 flex items-center justify-center text-base font-medium rounded-md text-indigo-700 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">
-                        <Github/>
+                    <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-300 w-full md:w-4/5">{{ project.name }}</h3>
+                    <a href="https://github.com/JfmGijsbers" target="_blank" class="py-2 flex items-center justify-center text-base font-medium rounded-md text-indigo-700 hover:bg-indigo-200 dark:hover:bg-gray-400">
+                        <Github :dark="$store.state.dark" class="md:w-10 w-full h-10"/>
                     </a>
                 </div>
-            <p class="mt-1 max-w-2xl text-sm text-gray-500">{{ project.intro }}</p>
-            <divider text="Info" class="mb-0"/>
+                <p class="mt-1 max-w-2xl text-sm text-gray-500 dark:text-gray-400">{{ project.intro }}</p>
+                <divider text="Info" class="mb-0"/>
             </div>
             <div class="px-4 pb-5 sm:px-6">
             <dl class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2 sm:text-center md:text-left lg:text-left">
                 <div class="sm:col-span-1">
-                <dt class="text-sm font-medium text-gray-500 text-bold">Technologies</dt>
-                <dd class="mt-1 text-sm text-gray-900">
+                <dt class="text-sm font-medium text-gray-500 text-bold dark:text-gray-300">Technologies</dt>
+                <dd class="mt-1 text-sm text-gray-900 dark:text-gray-400">
                     <ul class="list-none">
                         <li v-for="tech in project.techs" :key="tech">{{ tech }}</li>
                     </ul>
                 </dd>
                 </div>
                 <div class="sm:col-span-1">
-                <dt class="text-sm font-medium text-gray-500 text-bold">Achievements</dt>
-                <dd class="mt-1 text-sm text-gray-900">
+                <dt class="text-sm font-medium text-gray-500 dark:text-gray-300 text-bold">Achievements</dt>
+                <dd class="mt-1 text-sm text-gray-900 dark:text-gray-400">
                     <ul class="list-none">
                         <li v-for="achievements in project.achievements" :key="achievements">{{ achievements }}</li>
                     </ul>
                 </dd>
                 </div>
                 <div class="sm:col-span-2">
-                <dt class="text-sm font-medium text-gray-500">Description</dt>
-                <dd class="mt-1 text-sm text-gray-900">{{ project.description }}</dd>
+                <dt class="text-sm font-medium text-gray-500 dark:text-gray-300">Description</dt>
+                <dd class="mt-1 text-sm text-gray-900 dark:text-gray-400">{{ project.description }}</dd>
                 </div>
                 <div class="sm:col-span-2 px-10" v-if="project.images">
                     <dd class="mt-1 text-sm text-gray-900">
@@ -78,14 +78,14 @@
         width="700"
         height="800"
         >
-        <div class="modal w-full h-full outline-none overflow-x-hidden overflow-y-auto">
+        <div class="modal w-full h-full outline-none overflow-x-hidden overflow-y-auto dark:bg-gray-600 bg-white">
             <div class="modal-dialog relative w-auto pointer-events-none">
                 <div
-                class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
+                class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-clip-padding rounded-md outline-none text-current">
                 <div
-                    class="modal-header flex flex-shrink-0 items-center justify-between p-4 px-10 border-b border-gray-200 rounded-t-md">
+                    class="modal-header flex flex-shrink-0 items-center justify-between p-4 px-10 border-gray-200 rounded-t-md">
                     
-                    <VueSlickCarousel v-bind="dialogSettings" class="w-full">
+                    <VueSlickCarousel v-bind="dialogSettings" class="w-full" :style="color">
                             <div v-for="img in dialog.images" :key="img" class="carousel-container dialog-container">
                                 <img :src="img" alt="" class="carousel-img dialog-img">
                             </div>
@@ -202,6 +202,13 @@ export default {
             this.dialog.images = images;
             this.dialog.show = true;
         }
+    },
+    computed: {
+        color() {
+            return {
+                '--text-color': this.$store.state.dark ? '#9690f5' : '#4f46e5'
+            }
+        }
     }
 }
 </script>
@@ -216,12 +223,15 @@ export default {
     left: -30px;
 }
 .slick-prev:before {
-    color: black;
+    color: var(--text-color);
     font-size: 30px;
 }
 .slick-next:before {
-    color: black;
+    color: var(--text-color);
     font-size: 30px;
+}
+.slick-slide {
+    padding: 0 10px 0 10px;
 }
 .carousel-img {
     width: 80%;
