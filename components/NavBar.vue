@@ -14,7 +14,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
             </svg>
         </button>
-        <a href="/CV___Jeroen_Gijsbers.pdf" class="text-white bg-blue-700 dark:bg- hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        <a href="/CV___Jeroen_Gijsbers.pdf" class="hidden md:visible text-white bg-blue-700 dark:bg- hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             <Document/>
         </a>
         <div class="text-center md:hidden visible">

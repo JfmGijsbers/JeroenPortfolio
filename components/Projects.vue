@@ -40,7 +40,7 @@
                 <dt class="text-sm font-medium text-gray-500 dark:text-gray-300">Description</dt>
                 <dd class="mt-1 text-sm text-gray-900 dark:text-gray-400">{{ project.description }}</dd>
                 </div>
-                <div class="sm:col-span-2 px-10" v-if="project.images">
+                <div class="hidden md:visible sm:col-span-2 px-10" v-if="project.images">
                     <dd class="mt-1 text-sm text-gray-900">
                         <VueSlickCarousel v-bind="imgSettings" class="px-5">
                             <div v-for="img in project.images" :key="img" class="carousel-container">
@@ -56,6 +56,31 @@
                             </template>
                         </VueSlickCarousel>
                     </dd>
+                </div>
+                <div class="visible md:hidden" v-if="project.images">
+                    <div class="">
+                        <div v-if="showImages"  >
+                            <img v-for="img in project.images" :key="img" :src="img" alt="" class="w-full mt-2">
+                        </div>
+                        
+                        <div class="flex justify-center">
+                            <button 
+                                v-if="!showImages"
+                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex content-center"
+                                @click="showImages = true;"
+                                >
+                                Show images
+                            </button>
+                            <button 
+                                v-if="showImages"
+                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex content-center mt-2"
+                                @click="showImages = false;"
+                                >
+                                Hide images
+                            </button>
+
+                        </div>
+                    </div>
                 </div>
             </dl>
             </div>
@@ -129,8 +154,8 @@ export default {
             dialog: {
                 show: false,
                 images: [require('@/static/carousel_imgs/img1.jpg'), require('@/static/carousel_imgs/img2.jpg'), require('@/static/carousel_imgs/img3.jpg')],
-
             },
+            showImages: false,
             projects: [
                 {
                     name: 'ThisOne',
