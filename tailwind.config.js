@@ -13,7 +13,8 @@ module.exports = {
           sky: colors.sky,
           teal: colors.teal,
           rose: colors.rose,
-          orange: colors.orange
+          orange: colors.orange,
+          blue: colors.blue
         },
       },
     },
