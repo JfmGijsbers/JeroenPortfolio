@@ -40,7 +40,7 @@
                 <dt class="text-sm font-medium text-gray-500 dark:text-gray-300">Description</dt>
                 <dd class="mt-1 text-sm text-gray-900 dark:text-gray-400">{{ project.description }}</dd>
                 </div>
-                <div class="hidden md:visible sm:col-span-2 px-10" v-if="project.images">
+                <div class="hidden md:block sm:col-span-2 px-10" v-if="project.images">
                     <dd class="mt-1 text-sm text-gray-900">
                         <VueSlickCarousel v-bind="imgSettings" class="px-5">
                             <div v-for="img in project.images" :key="img" class="carousel-container">
