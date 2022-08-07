@@ -46,11 +46,11 @@
                             <div v-for="img in project.images" :key="img" class="carousel-container">
                                 <img :src="img" alt="" class="carousel-img cursor-pointer" @click="openDialog(project.images)">
                             </div>
-                            <template #prevArrow="arrowOption">
+                            <template #prevArrow>
                                 <div class="custom-arrow">
                                 </div>
                             </template>
-                            <template #nextArrow="arrowOption">
+                            <template #nextArrow>
                                 <div class="custom-arrow">
                                 </div>
                             </template>
@@ -85,11 +85,11 @@
             </dl>
             </div>
         </div>
-        <template #prevArrow="arrowOption">
+        <template #prevArrow>
             <div class="custom-arrow">
             </div>
         </template>
-        <template #nextArrow="arrowOption">
+        <template #nextArrow>
             <div class="custom-arrow">
             </div>
         </template>
@@ -111,20 +111,18 @@
                     class="modal-header flex flex-shrink-0 items-center justify-between p-4 px-10 border-gray-200 rounded-t-md">
                     
                     <VueSlickCarousel v-bind="dialogSettings" class="w-full" :style="color">
-                            <div v-for="img in dialog.images" :key="img" class="carousel-container dialog-container">
-                                <img :src="img" alt="" class="carousel-img dialog-img">
+                        <div v-for="img in dialog.images" :key="img" class="carousel-container dialog-container">
+                            <img :src="img" alt="" class="carousel-img dialog-img">
+                        </div>
+                        <template #prevArrow>
+                            <div class="custom-arrow">
                             </div>
-                            <template #prevArrow="arrowOption">
-                                <div class="custom-arrow">
-                                </div>
-                            </template>
-                            <template #nextArrow="arrowOption">
-                                <div class="custom-arrow">
-                                </div>
-                            </template>
-    
-
-                        </VueSlickCarousel>
+                        </template>
+                        <template #nextArrow>
+                            <div class="custom-arrow">
+                            </div>
+                        </template>
+                    </VueSlickCarousel>
                 </div>
                 </div>
             </div>
@@ -150,7 +148,6 @@ export default {
     },
     data: () => {
         return {
-            nrOfSlides: 2,
             dialog: {
                 show: false,
                 images: [require('@/static/carousel_imgs/img1.jpg'), require('@/static/carousel_imgs/img2.jpg'), require('@/static/carousel_imgs/img3.jpg')],
@@ -200,24 +197,24 @@ export default {
                 "infinite": true,
                 "speed": 500,
                 "slidesToShow": 2,
-                "prevArrow": '<button class="slide-arrow prev-arrow"></button>',
-                "nextArrow": '<button class="slide-arrow next-arrow"></button>'
+                // "prevArrow": '<button class="slide-arrow prev-arrow"></button>',
+                // "nextArrow": '<button class="slide-arrow next-arrow"></button>'
             },
             imgSettings: {
                 "infinite": true,
                 "speed": 500,
                 "slidesToShow": 2,
 
-                "prevArrow": '<button class="slide-arrow img-prev-arrow"></button>',
-                "nextArrow": '<button class="slide-arrow img-next-arrow"></button>'
+                // "prevArrow": '<button class="slide-arrow img-prev-arrow"></button>',
+                // "nextArrow": '<button class="slide-arrow img-next-arrow"></button>'
             },
             dialogSettings: {
                 "infinite": true,
                 "speed": 500,
                 "slidesToShow": 1,
 
-                "prevArrow": '<button class="slide-arrow img-prev-arrow"></button>',
-                "nextArrow": '<button class="slide-arrow img-next-arrow"></button>'
+                // "prevArrow": '<button class="slide-arrow img-prev-arrow"></button>',
+                // "nextArrow": '<button class="slide-arrow img-next-arrow"></button>'
 
             }
         }
@@ -247,12 +244,16 @@ export default {
 .slick-prev {
     left: -30px;
 }
-.slick-prev:before {
+/* .slick-prev:before {
     color: var(--text-color);
     font-size: 30px;
 }
 .slick-next:before {
     color: var(--text-color);
+    font-size: 30px;
+} */
+.custom-arrow::before {
+    color: #9690f5;
     font-size: 30px;
 }
 .slick-slide {
